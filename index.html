@@ -1,135 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Buyer Almaty</title>
-    <style>
-        :root {
-            --bg-color: #0d0e12;
-            --text-color: #ffffff;
-            --text-muted: #8a8f98;
-            --accent-color: #2f69ff;
-            --accent-hover: #1e52d9;
-            --card-bg: #16181f;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Buyer в Алматы — набор в команду</title>
+<meta name="description" content="Ищем media buyers в Алматы. Обучение с нуля, готовые связки, бюджеты после тестового периода. Офис, полная занятость.">
+<meta name="theme-color" content="#0B0C10">
+<meta property="og:title" content="Media Buyer в Алматы — набор в команду">
+<meta property="og:description" content="Обучение, готовые связки, бюджеты после теста. Офис, full-time.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --bg:#0B0C10;
+  --surface:#13151C;
+  --surface-2:#1A1D26;
+  --border:#252936;
+  --text:#F5F7FA;
+  --muted:#9AA1AF;
+  --accent:#3B6EFF;
+  --accent-hover:#5583FF;
+  --accent-soft:rgba(59,110,255,.12);
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(800px 400px at 50% -100px,rgba(59,110,255,.22),transparent 70%);
+  background-repeat:no-repeat;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+section{padding:48px 0}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+/* HERO */
+.hero{padding:72px 0 48px;text-align:center}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent-soft);color:var(--accent-hover);
+  border:1px solid rgba(59,110,255,.3);
+  padding:8px 16px;border-radius:999px;
+  font-size:13px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;margin-bottom:24px;
+}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:#2FD07A;box-shadow:0 0 0 4px rgba(47,208,122,.2)}
+h1{font-size:clamp(32px,6vw,48px);line-height:1.15;font-weight:800;letter-spacing:-1px;margin-bottom:16px}
+h1 span{color:var(--accent-hover)}
+.lead{color:var(--muted);font-size:18px;max-width:520px;margin:0 auto 32px}
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:56px;padding:16px 32px;border-radius:12px;
+  background:var(--accent);color:#fff;text-decoration:none;
+  font-size:17px;font-weight:600;
+  box-shadow:0 8px 24px rgba(59,110,255,.35);
+  transition:background .2s,transform .2s,box-shadow .2s;
+}
+.btn:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 12px 32px rgba(59,110,255,.45)}
+.btn:active{transform:translateY(0)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.hero .btn{min-width:280px}
+.note{margin-top:16px;font-size:14px;color:var(--muted)}
 
-        .container {
-            max-width: 600px;
-            width: 100%;
-        }
+/* TITLES */
+h2{font-size:28px;font-weight:700;letter-spacing:-.4px;margin-bottom:24px;text-align:center}
 
-        .header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
+/* BENEFITS */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:24px;
+  transition:border-color .2s,transform .2s;
+}
+.card:hover{border-color:rgba(59,110,255,.5);transform:translateY(-2px)}
+.icon{
+  width:48px;height:48px;border-radius:12px;background:var(--accent-soft);
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:24px;
+}
+.card h3{font-size:18px;font-weight:600;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px}
 
-        .badge {
-            background: rgba(47, 105, 255, 0.1);
-            color: var(--accent-color);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: inline-block;
-            margin-bottom: 16px;
-        }
+/* STEPS */
+.steps{list-style:none;counter-reset:s;display:grid;gap:16px}
+.steps li{
+  counter-increment:s;display:flex;gap:16px;align-items:flex-start;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;
+}
+.steps li::before{
+  content:counter(s);flex:0 0 40px;height:40px;border-radius:50%;
+  background:var(--accent);color:#fff;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps h3{font-size:17px;font-weight:600;margin-bottom:4px}
+.steps p{color:var(--muted);font-size:15px}
 
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 12px;
-        }
+/* FINAL CTA */
+.final{
+  text-align:center;background:linear-gradient(180deg,var(--surface-2),var(--surface));
+  border:1px solid var(--border);border-radius:24px;padding:48px 24px;margin:16px 0 64px;
+}
+.final h2{margin-bottom:8px}
+.final p{color:var(--muted);margin-bottom:32px}
 
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
+footer{text-align:center;color:var(--muted);font-size:13px;padding:0 0 48px}
 
-        .section {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 20px;
-            border: 1px solid #222630;
-        }
+/* STICKY MOBILE CTA */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:10;
+  padding:16px;background:rgba(11,12,16,.92);backdrop-filter:blur(12px);
+  border-top:1px solid var(--border);display:none;
+  transform:translateY(100%);transition:transform .3s;
+}
+.sticky.show{transform:translateY(0)}
+.sticky .btn{width:100%}
 
-        h2 {
-            font-size: 1.2rem;
-            margin-bottom: 16px;
-            color: var(--text-color);
-        }
+@media(max-width:600px){
+  .hero{padding:48px 0 32px}
+  section{padding:32px 0}
+  .grid{grid-template-columns:1fr}
+  .hero .btn{width:100%}
+  .sticky{display:block}
+  footer{padding-bottom:96px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 
-        ul {
-            list-style: none;
-        }
-
-        li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 12px;
-            color: var(--text-muted);
-        }
-
-        li::before {
-            content: "•";
-            color: var(--accent-color);
-            font-weight: bold;
-            position: absolute;
-            left: 8px;
-        }
-
-        li strong {
-            color: var(--text-color);
-        }
-
-        .btn {
-            display: block;
-            width: 100%;
-            background: var(--accent-color);
-            color: #fff;
-            text-align: center;
-            padding: 16px;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background 0.2s ease;
-            margin-top: 28px;
-            box-shadow: 0 4px 12px rgba(47, 105, 255, 0.2);
-        }
-
-        .btn:hover {
-            background: var(--accent-hover);
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 1.6rem; }
-            body { padding: 20px 16px; }
-        }
-    </style>
-    <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -143,34 +140,93 @@ fbq('init', '29708765075408644');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=29708765075408644&ev=PageView&noscript=1"
-/></noscript>
+src="https://www.facebook.com/tr?id=29708765075408644&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel Code -->
 </head>
 <body>
 
-<div class="container">
-    
-    <div class="header">
-        <span class="badge">Набор в команду</span>
-        <h1>Ищем Media Buyers г. Алматы</h1>
-        <p class="subtitle">Работа с масштабными бюджетами и стабильным сорсом</p>
+<main class="wrap">
+
+  <header class="hero">
+    <span class="badge">Набор открыт</span>
+    <h1>Media Buyer<br><span>в команду, Алматы</span></h1>
+    <p class="lead">Масштабные бюджеты, готовые связки и обучение. Работа в офисе, полная занятость.</p>
+    <a href="https://t.me/mediabuying01" class="btn js-cta" target="_blank" rel="noopener" id="hero-cta">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.8 15.3l-.4 4.1c.6 0 .9-.3 1.2-.6l2.9-2.7 6 4.4c1.1.6 1.9.3 2.2-1L23.9 4c.4-1.600-.6-2.300-1.700-1.900L1.500 10c-1.600.6-1.600 1.500-.3 1.900l5.300 1.700L18.900 6c.6-.4 1.100-.2.700.2z"/></svg>
+      Написать в Telegram
+    </a>
+    <p class="note">Ответим в течение дня</p>
+  </header>
+
+  <section aria-labelledby="offer">
+    <h2 id="offer">Что мы предлагаем</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="icon" aria-hidden="true">💰</div>
+        <h3>Бюджеты</h3>
+        <p>После тестового периода — безлимитные средства на залив.</p>
+      </article>
+      <article class="card">
+        <div class="icon" aria-hidden="true">🎓</div>
+        <h3>Обучение</h3>
+        <p>Полное обучение заливу трафика и работе с ИИ.</p>
+      </article>
+      <article class="card">
+        <div class="icon" aria-hidden="true">⚙️</div>
+        <h3>Инфраструктура</h3>
+        <p>Готовые связки и техническая поддержка.</p>
+      </article>
+      <article class="card">
+        <div class="icon" aria-hidden="true">🏢</div>
+        <h3>Формат</h3>
+        <p>Офис в Алматы, полная занятость.</p>
+      </article>
     </div>
+  </section>
 
-    <div class="section">
-        <h2>Что мы предлагаем:</h2>
-        <ul>
-            <li><strong>Бюджеты:</strong> После тестового периода безлимитные средства на залив</li>
-            <li><strong>Работа:</strong> Полное обучение заливу трафика и работы с ИИ</li>
-            <li><strong>Инфраструктура:</strong> Готовые связки, техническая поддержка</li>
-            <li><strong>Формат:</strong> Работа в офисе, полная занятость</li>
-        </ul>
-    </div>
+  <section aria-labelledby="how">
+    <h2 id="how">Как попасть в команду</h2>
+    <ol class="steps">
+      <li>
+        <div><h3>Напиши нам</h3><p>Коротко о себе и опыте в Telegram.</p></div>
+      </li>
+      <li>
+        <div><h3>Тестовый период</h3><p>Обучение, работа на готовых связках, первые результаты.</p></div>
+      </li>
+      <li>
+        <div><h3>Масштабирование</h3><p>После теста — доступ к безлимитным бюджетам.</p></div>
+      </li>
+    </ol>
+  </section>
 
-    <!-- ЗАМЕНИТЕ ССЫЛКУ НА ВАШУ АНКЕТУ ИЛИ ТГ-БОТА -->
-    <a href="https://t.me/Icnt_usdt" class="btn" target="_blank">Написать нам</a>
+  <section class="final" aria-labelledby="final-t">
+    <h2 id="final-t">Готов начать?</h2>
+    <p>Напиши — обсудим детали.</p>
+    <a href="https://t.me/mediabuying01" class="btn js-cta" target="_blank" rel="noopener">Написать нам</a>
+  </section>
 
+  <footer>Media Buyer Almaty</footer>
+</main>
+
+<div class="sticky" id="sticky">
+  <a href="https://t.me/mediabuying01" class="btn js-cta" target="_blank" rel="noopener">Написать в Telegram</a>
 </div>
 
+<script>
+// Meta Pixel: событие Lead при клике на CTA
+document.querySelectorAll('.js-cta').forEach(function(el){
+  el.addEventListener('click',function(){
+    if(window.fbq){fbq('track','Lead');}
+  });
+});
+// Sticky CTA на мобиле: показывать после скролла героя
+(function(){
+  var s=document.getElementById('sticky'),h=document.getElementById('hero-cta');
+  if(!('IntersectionObserver' in window)||!h)return;
+  new IntersectionObserver(function(e){
+    s.classList.toggle('show',!e[0].isIntersecting);
+  }).observe(h);
+})();
+</script>
 </body>
 </html>
